@@ -44,12 +44,12 @@ module DashboardHelper
   def welcome_message
     if @current_user.has_future_enrollment?
       t("#users.welcome.unpublished_courses_message", <<~TEXT)
-        You're enrolled in one or more trainings that have not started yet. Once
-        they begin, they will appear here.
+        You're assigned to one or more job sites that are not active yet. Once
+        they start, they will appear here.
       TEXT
     else
       t("#users.welcome.no_courses_message", <<~TEXT)
-        You don't have any upcoming trainings yet. Once you're enrolled in one,
+        You aren't assigned to any job sites yet. Once you're added to one,
         it will appear here.
       TEXT
     end
